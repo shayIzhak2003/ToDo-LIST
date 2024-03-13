@@ -1,0 +1,5 @@
+[
+    { "text": "Sample Task 1", "id": 1, "completed": false },
+    { "text": "Sample Task 2", "id": 2, "completed": true },
+    { "text": "Sample Task 3", "id": 3, "completed": false }
+]

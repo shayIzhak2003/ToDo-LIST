@@ -1,0 +1,329 @@
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+*{
+  box-sizing: border-box;
+  font-family: "poppins",sans-serif;
+  animation: slideTop 1s ease forwards;
+}
+
+h1 {
+  font-size: 36px;
+  color: #00aaff;
+  text-align: center;
+  position: relative;
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+h2 {
+  color:  rgba(255, 0, 0, 0.8);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  position: relative;
+  animation: glow_2 1.5s ease-in-out infinite alternate;
+}
+h4{
+  border: 4px solid #000;
+  margin: 7px;
+  padding: 7px;
+  text-align: center;
+  border-radius: 5px;
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #00aaff, 0 0 20px #00aaff, 0 0 30px #00aaff;
+  }
+  to {
+    text-shadow: 0 0 15px #00aaff, 0 0 30px #00aaff, 0 0 45px #00aaff;
+  }
+}
+
+@keyframes glow_2 {
+  from {
+    text-shadow: 0 0 10px  rgba(255, 0, 0, 0.8), 0 0 20px  rgba(255, 0, 0, 0.8), 0 0 30px  rgba(255, 0, 0, 0.8);
+  }
+  to {
+    text-shadow: 0 0 15px  rgba(255, 0, 0, 0.8), 0 0 30px  rgba(255, 0, 0, 0.8), 0 0 45px  rgba(255, 0, 0, 0.8);
+  }
+}
+
+body{
+  animation: backgroundAnimation 10s linear infinite; 
+}
+
+@keyframes slideTop {
+  0% {
+      opacity: 0;
+      transform:
+       translateY(100px);
+  }
+
+}
+
+.app-container {
+  width: 400px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.task-list {
+  margin-top: 20px;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 0;
+  margin-bottom: 11px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.task-buttons{
+  margin-left: 5px;
+  padding: 5px 10px;
+}
+
+
+.DeleteBtn{
+  margin-left: 5px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  background-color: red;
+  color: white;
+  border-radius: 3px;
+  transition: background-color 0.3s ease-in-out;
+}
+.DeleteBtn:hover{
+  background-color: rgb(192, 45, 45);
+}
+.SaveBtn{
+  margin-left: 5px;
+  margin-bottom: 12px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  background-color: green;
+  color: white;
+  border-radius: 3px;
+  transition: background-color 0.3s ease-in-out;
+}
+.SaveBtn:hover{
+  background-color: rgb(12, 138, 12);
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+
+.AddBtn{
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.AddBtn:hover{
+  background-color: #0056b3;
+}
+/* edit button compontent */
+.EditBtn{
+  margin-left: 5px;
+  margin-bottom: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.EditBtn:hover{
+  background-color: #0056b3;
+}
+/* cancel button compontent */
+.CancelBtn{
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.CancelBtn:hover{
+  background-color: #0056b3;
+}
+.MainInput{
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  color: #333;
+  font-size: 16px;
+  width: 200px;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+.MainInput:focus {
+  outline: none;
+  background-color: #fff;
+  color: #555;
+  box-shadow: 0 0 15px #0056b3;
+}
+.SideInput{
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  color: #333;
+  font-size: 16px;
+  width: 200px;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+.SideInput:focus {
+  outline: none;
+  background-color: #fff;
+  color: #555;
+  box-shadow: 0 0 15px #0056b3;
+}
+.task-item {
+  position: relative;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  font-weight: bolder;
+}
+
+/* spinning animation while it loads*/
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loading-spinner {
+  width: 250px;
+  height: 250px;
+  border: 5px solid transparent;
+  border-top-color: #3445db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.task-list-container {
+  max-height: 60vh; 
+  overflow-y: auto;
+}
+/* responsiviton for devices */
+
+@media (min-width: 1024px) {
+  .app-container {
+    width: 600px; 
+  }
+}
+
+/* Medium-sized screens - tablets */
+@media (max-width: 1023px) {
+  .app-container {
+    width: 80%; 
+  }
+}
+
+/* Smaller screens - mobile devices */
+@media (max-width: 768px) {
+  .app-container {
+    width: 90%; 
+    padding: 10px; 
+  }
+  h1 {
+    font-size: 24px; 
+  }
+  h2 {
+    font-size: 18px; 
+  }
+  .MainInput {
+    width: 100%; 
+  }
+}
+
+
+/* Background animation */
+@keyframes backgroundAnimation {
+  0% {
+    background-color: #3498db; 
+  }
+  50% {
+    background-color: #3498db; 
+  }
+  100% {
+    background-color: #3498db; 
+  }
+}
+
+/* Flying squares animation */
+@keyframes flyingSquares {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 1;
+    z-index: -1;
+  }
+}
+
+
+
+
+/* Flying squares */
+.square {
+  width: 40px;
+  height: 40px;
+  background-color: #fff; 
+  position: absolute;
+  opacity: 0;
+  border-radius: 7px ;
+  animation: flyingSquares 8s linear infinite;
+}
+
+.square1 { left: 10%; animation-delay: 3s; width: 100px; height: 100px; }
+.square2 { left: 30%; animation-delay: 3.5s; }
+.square3 { left: 50%; animation-delay: 3.8s; }
+.square4 { left: 70%; animation-delay: 4.5s; width: 80px; height: 80px; }
+.square5 { left: 90%; animation-delay: 2s; width: 150px; height: 150px;}
